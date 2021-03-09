@@ -16,14 +16,14 @@
     <ol>
         @foreach ($steps as $step)
         <li>{{ $step }}</li>
-        @endforeach
-        <li>
+        @if ($loop->last)
             <ul>
                 @foreach ($commands as $command)
                 <li>{{ $command }}</li>
                 @endforeach
             </ul>
-        </li>
+        @endif
+        @endforeach
     </ol>
 
 </body>
